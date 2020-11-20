@@ -1,5 +1,8 @@
+import cv2
+import numpy as np
 from .model import *
 from tensorflow.keras.optimizers import Adam
+
 
 def train():
   input_height = 48
@@ -11,7 +14,9 @@ def train():
   model = YRRModel(input_shape, n_classes)
   adam = Adam()
   model.compile(
-  optimizer=adam,
-  loss='categorical_crossentropy', metrics=['acc'])
+    optimizer=adam,
+    loss='categorical_crossentropy', metrics=['acc'])
 
   data_dir = './data'
+
+  
