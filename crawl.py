@@ -18,3 +18,4 @@ if __name__ == "__main__":
 
   driver = webdriver.Chrome(options=options)
   driver.implicitly_wait(3)
+
